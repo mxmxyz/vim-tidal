@@ -4,7 +4,7 @@ set -euf -o pipefail
 VIM=${VIM:-"vim"}
 TMUX=${TMUX:-"tmux"}
 
-FILE=${FILE:-"$(date +%F).tidal"}
+FILE=${FILE:-"$(desamber).tidal"}
 SESSION=${SESSION:-"tidal"}
 
 TIDAL_BOOT_PATH=${TIDAL_BOOT_PATH:-""}
