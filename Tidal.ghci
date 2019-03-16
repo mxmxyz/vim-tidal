@@ -1,3 +1,7 @@
+:set -XOverloadedStrings
+:set prompt ""
+:set prompt-cont ""
+
 import Sound.Tidal.Context
 
 import Sound.Tidal.Guiot.Control
@@ -5,7 +9,10 @@ import Sound.Tidal.Guiot.Functions
 import Sound.Tidal.Guiot.Scales
 
 tidal <- startTidal superdirtTarget defaultConfig
+ -- total latency = oLatency + cFrameTimespan
+tidal <- startTidal (superdirtTarget {oLatency = 0.1, oAddress = "127.0.0.1", oPort = 57120}) (defaultConfig {cFrameTimespan = 1/20})
 
+:{
 let p = streamReplace tidal
     hush = streamHush tidal
     list = streamList tidal
@@ -48,5 +55,6 @@ let p = streamReplace tidal
     d14 = p "14"
     d15 = p "15"
     d16 = p "16"
+:}
 
 :set prompt "tidal> "
