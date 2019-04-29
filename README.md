@@ -86,6 +86,9 @@ Finally, go to the plugin repository and run `make install`:
 This creates symlinks on `/usr/local/bin` for `tidal` and `tidalvim` scripts.
 You can remove them later if you want with `make uninstall`.
 
+Make sure to have the `filetype plugin on` setting on your .vimrc, otherwise
+plugin won't be loaded when opening a .tidal file.
+
 ### Older Tidal versions (pre 1.0) ###
 
 Tidal 1.0 introduces some breaking changes, so if haven't upgraded yet, you can
@@ -344,6 +347,9 @@ this to sending current paragraph. If this is happening you either:
 2. Have `g:tidal_no_mappings` setting on your `.vimrc`. This disables all
    mappings.
    *Solution*: Remove `<c-e>` binding, or rebind to something else.
+
+It could also be that you do not have `filetype plugin on` setting in your
+.vimrc.  Make sure you have that setting defined.
 
 > I press `<c-e>` and nothing else happens
 
