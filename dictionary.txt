@@ -19,8 +19,16 @@ paliWith
 
 makeStruct
 
-superLayer
+tribonacci
+tribonaccipat
+thuemorse
+thuemorsepat
 
+superLayer
+jsuperLayer
+
+sby
+panr
 
 mos
 
@@ -51,6 +59,11 @@ fmamt
 combdel
 combtime
 attpercent
+panx
+pany
+noise
+lopfstart
+lopfend
 
 begin
 legato
@@ -85,8 +98,13 @@ lfosync
 lock
 loop
 note
+nrpn
+nrpnn
+nrpnv
 nudge
 orbit
+overgain
+overshape
 pan
 panwidth
 resonance
@@ -197,6 +215,8 @@ append
 cat
 fastcat
 timeCat
+fastcat
+slowcat
 overlay
 stack
 randcat
